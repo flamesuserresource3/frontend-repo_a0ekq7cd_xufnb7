@@ -26,13 +26,13 @@ export default function AboutSections() {
   ];
 
   return (
-    <section className="py-14 sm:py-20 bg-white" id="tentang">
+    <section className="py-14 sm:py-20" id="tentang">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
             Tentang Organisasi
           </h2>
-          <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 text-white/70 max-w-2xl mx-auto">
             Memperkuat jaringan mahasiswa melalui edukasi, kolaborasi, dan karya nyata.
           </p>
         </div>
@@ -42,13 +42,13 @@ export default function AboutSections() {
             <div
               key={id}
               id={id}
-              className="group rounded-2xl border border-gray-200 p-6 sm:p-7 hover:border-emerald-500/40 hover:shadow-sm transition"
+              className="group rounded-2xl p-6 sm:p-7 bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/15 hover:border-white/30 transition shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
             >
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 mb-4">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white mb-4 border border-white/20">
                 <Icon className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-              <p className="mt-2 text-gray-600 leading-relaxed">{desc}</p>
+              <h3 className="text-lg font-semibold text-white">{title}</h3>
+              <p className="mt-2 text-white/80 leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>

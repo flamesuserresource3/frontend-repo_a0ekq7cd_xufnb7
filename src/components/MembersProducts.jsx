@@ -19,25 +19,25 @@ const products = [
 
 export default function MembersProducts() {
   return (
-    <section className="py-14 sm:py-20 bg-white" id="anggota">
+    <section className="py-14 sm:py-20" id="anggota">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Members */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white border border-white/20">
                 <Users className="h-5 w-5" />
               </span>
-              <h3 className="text-xl font-semibold text-gray-900">Anggota Inti</h3>
+              <h3 className="text-xl font-semibold text-white">Anggota Inti</h3>
             </div>
             <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {members.map((m, idx) => (
                 <li key={idx} className="text-center">
-                  <div className={`mx-auto h-16 w-16 rounded-full ${m.color} text-white flex items-center justify-center font-semibold shadow`}> 
+                  <div className={`mx-auto h-16 w-16 rounded-full ${m.color} text-white/95 flex items-center justify-center font-semibold shadow-xl border border-white/10`}>
                     {m.name.split(" ")[0]}
                   </div>
-                  <p className="mt-2 text-sm font-medium text-gray-900">{m.name}</p>
-                  <p className="text-xs text-gray-500">{m.role}</p>
+                  <p className="mt-2 text-sm font-medium text-white">{m.name}</p>
+                  <p className="text-xs text-white/70">{m.role}</p>
                 </li>
               ))}
             </ul>
@@ -46,22 +46,22 @@ export default function MembersProducts() {
           {/* Products */}
           <div id="produk">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white border border-white/20">
                 <ShoppingBag className="h-5 w-5" />
               </span>
-              <h3 className="text-xl font-semibold text-gray-900">Produk</h3>
+              <h3 className="text-xl font-semibold text-white">Produk</h3>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               {products.map((p, idx) => (
-                <div key={idx} className="rounded-xl border border-gray-200 p-5 hover:shadow-sm transition">
+                <div key={idx} className="rounded-2xl p-5 bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/15 hover:border-white/30 transition shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <h4 className="font-semibold text-gray-900">{p.name}</h4>
-                      <p className="text-sm text-gray-500">{p.desc}</p>
+                      <h4 className="font-semibold text-white">{p.name}</h4>
+                      <p className="text-sm text-white/80">{p.desc}</p>
                     </div>
-                    <span className="text-sm font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">{p.price}</span>
+                    <span className="text-sm font-semibold text-emerald-200 bg-emerald-900/30 px-2.5 py-1 rounded-full border border-emerald-300/20">{p.price}</span>
                   </div>
-                  <button className="mt-4 w-full rounded-lg bg-emerald-600 text-white py-2 text-sm font-medium hover:bg-emerald-700 transition">
+                  <button className="mt-4 w-full rounded-lg bg-white/90 text-blue-900 py-2 text-sm font-medium hover:bg-white transition border border-white/20">
                     Pesan
                   </button>
                 </div>

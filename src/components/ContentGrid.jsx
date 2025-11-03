@@ -34,28 +34,28 @@ const artikelList = [
 
 export default function ContentGrid() {
   return (
-    <section className="py-14 sm:py-20 bg-gray-50" id="berita">
+    <section className="py-14 sm:py-20" id="berita">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white border border-white/20">
                 <Newspaper className="h-5 w-5" />
               </span>
-              <h3 className="text-xl font-semibold text-gray-900">Berita</h3>
+              <h3 className="text-xl font-semibold text-white">Berita</h3>
             </div>
             <div className="space-y-4">
               {beritaList.map((b, idx) => (
                 <article
                   key={idx}
-                  className="rounded-xl border border-gray-200 bg-white p-5 hover:shadow-sm transition"
+                  className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-5 hover:bg-white/15 hover:border-white/30 transition shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
                 >
-                  <div className="flex items-center gap-3 text-sm text-gray-500">
-                    <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{b.tag}</span>
+                  <div className="flex items-center gap-3 text-sm text-white/70">
+                    <span className="px-2 py-0.5 rounded-full bg-white/15 text-white border border-white/20">{b.tag}</span>
                     <span>{b.date}</span>
                   </div>
-                  <h4 className="mt-2 text-lg font-semibold text-gray-900">{b.title}</h4>
-                  <p className="mt-1 text-gray-600">{b.excerpt}</p>
+                  <h4 className="mt-2 text-lg font-semibold text-white">{b.title}</h4>
+                  <p className="mt-1 text-white/80">{b.excerpt}</p>
                 </article>
               ))}
             </div>
@@ -63,20 +63,20 @@ export default function ContentGrid() {
 
           <div id="artikel">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-sky-100 text-sky-700">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white border border-white/20">
                 <FileText className="h-5 w-5" />
               </span>
-              <h3 className="text-xl font-semibold text-gray-900">Artikel</h3>
+              <h3 className="text-xl font-semibold text-white">Artikel</h3>
             </div>
             <div className="space-y-4">
               {artikelList.map((a, idx) => (
                 <article
                   key={idx}
-                  className="rounded-xl border border-gray-200 bg-white p-5 hover:shadow-sm transition"
+                  className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-5 hover:bg-white/15 hover:border-white/30 transition shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
                 >
-                  <h4 className="text-lg font-semibold text-gray-900">{a.title}</h4>
-                  <p className="mt-1 text-gray-600">{a.excerpt}</p>
-                  <p className="mt-2 text-sm text-gray-500">Penulis: {a.author}</p>
+                  <h4 className="text-lg font-semibold text-white">{a.title}</h4>
+                  <p className="mt-1 text-white/80">{a.excerpt}</p>
+                  <p className="mt-2 text-sm text-white/70">Penulis: {a.author}</p>
                 </article>
               ))}
             </div>
